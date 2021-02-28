@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+    <div class="title grid">
+        <h3 class="title_text">Listado de movimientos myCrypto</h3>
+        <div class="title_button-new">
+            <a role="button" href="/compra">Nuevo</a>
+    </div>
+    </div>
+    {% if datos|length > 0 %}
+        <table>
+            <tr>
+                <th class="id">id</th>
+                <th class="date">date</th>
+                <th class="from_currency">from_currency</th>
+                <th class="from_quantity">from_quantity</th>
+                <th class="to_currency">to_currency</th>
+                <th class="to_quantity">to_quantity</th>
+            </tr>
+            <tr>
+                <td class="total" colspan="3">Total: {{total}}€</td>
+            </tr>
+        </table>
+    {% else %}
+        <p>No hay movimientos. crea el tuyo</p>
+        
+    {% endif %}
+    {% endblock %}
+{% endblock %} 

@@ -4,19 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myCrypto</title>
+    <title>{{title}}</title>
+
+
+<!-- Bootstrap 5 only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<data-theme="dark">
 </head>
 <body>
-    <header data-theme="dark">
+    <header>
         <div class="header">Boot Z 6 - mycryto</div>
-        <nav>
-            <ul>
-                <li><a href="/">Inicio</a></li>
-            </ul>
-        </nav>    
     </header>
+    <div class>
+        <a href="/">Home</a> 
+    </div>
+    <div class>
+        
+        <div class="btn-group">
+            <a href="/inicio" class="btn btn-primary" aria-current="page">Inicio</a>
+            <a href="/compra" class="btn btn-primary">Compra</a>
+            <a href="/status" class="btn btn-primary">Status</a>
+        </div>
+        
+    {% block content %}{% endblock %}
+    </section>
     <footer data-theme="dark">
         &copy; 2021.Todos los derechos reservados
+    </footer>
+    <footer data-theme="dark">
+            <span>Photo by <a href="https://unsplash.com/@mrdongok?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">董 博儒</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
     </footer>
 </body>
 </html>
